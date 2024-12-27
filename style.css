@@ -1,0 +1,114 @@
+body {
+     background-image: url(.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #343a41; /* Light background for body */
+    color: #000;
+}
+
+.card {
+    width: 450px;
+    height: 500px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center; /* Center text */
+}
+
+.card-front {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Added for Safari support */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-back {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Added for Safari support */
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.calculator {
+    padding: 20px;
+}
+
+#result {
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    margin-bottom: 15px;
+    font-size: 28px;
+    border: 1px solid #ced4da;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #908282, #6c5757);
+    box-shadow: 5px 5px 10px #494343,
+                -5px -5px 10px #5d5555;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #382929, #634343);
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px #d1d1d1,
+                -5px -5px 15px #ffffff;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #121212; /* Dark background for body */
+    color: #ffffff;
+}
+
+.card-front.dark-theme, .card-back.dark-theme {
+    background: rgba(18, 18, 18, 0.9); /* Darker background for card */
+}
+
+button.dark-theme {
+    background: linear-gradient(145deg, #333333, #444444);
+    color: #ffffff;
+}

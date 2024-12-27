@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Calculator</title>
+</head>
+<body>
+   
+    <div class="card">
+        <div class="card-inner">
+            <div class="card-front">
+                <h2>Hover to Use Calculator</h2>
+           <!-- Theme toggle button -->
+            </div>
+            <div class="card-back">
+                <div class="calculator">
+                    <input type="text" id="result" disabled placeholder="0">
+                    <div class="buttons">
+                        <button onclick="clearResult()">C</button>
+                        <button style="font-style: italic;" onclick="appendToResult('7')">7</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('8')">8</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('9')">9</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('/')">/</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('4')">4</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('5')">5</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('6')">6</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('*')">*</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('1')">1</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('2')">2</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('3')">3</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('-')">-</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('0')">0</button>
+                        <button style="font-style: italic;"  onclick="calculateResult()">=</button>
+                        <button style="font-style: italic;"  onclick="appendToResult('+')">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
+    
+    <script src="script.js"></script>
+</body>
+</html>
